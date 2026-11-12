@@ -50,7 +50,7 @@ def get_user(userId: str, db: Session = Depends(get_db)):
     if not db_user:
         raise HTTPException(
             status_code=status.HTTP_404_NOT_FOUND,
-            detail=f"No User with this id: `{db_user.id}` found",
+            detail=f"No User with this id: `{userId}` found",
         )
 
     try:
